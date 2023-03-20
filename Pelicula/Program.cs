@@ -7,7 +7,7 @@ namespace Pelicula
     public class Pelicula
     {
         //Campos
-        private string titulo { get; set;}
+        private string titulo;
         public string SetTitulo
         {
             set { titulo = value;}
@@ -16,6 +16,7 @@ namespace Pelicula
         {
             get { return titulo;}
         }
+
         private Int16 año { get; set;}
         public Int16 SetAño
         {
@@ -35,7 +36,7 @@ namespace Pelicula
         {
 
         }
-        Pelicula(string titulo, Int16 año)
+        public Pelicula(string titulo, Int16 año)
         {
 
         }
