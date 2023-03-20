@@ -7,10 +7,21 @@ namespace Pelicula
     public class Pelicula
     {
         //Campos
-        public string titulo;
-        public Int16 año;
-        public string pais;
-        public string director;
+        private string titulo { get; set;}
+        public string Titulo
+        {
+            get { return titulo;}
+            set { titulo = value;}
+        }
+        private Int16 año { get; set;}
+        public Int16 Año
+        {
+            get { return año;}
+            set { año = value;}
+        }
+
+        private string pais { get; set;}
+        private string director { get; set;}
         private List<Actor> actores = new List<Actor>();
 
         //Constructores
@@ -22,8 +33,6 @@ namespace Pelicula
      //       Console.WriteLine($"{titulo} ({año})");
 
         }
-
-
     }
 
     public class Actor
@@ -51,15 +60,12 @@ namespace Pelicula
         {
             Pelicula pelicula1 = new Pelicula();
             Pelicula pelicula2 = new Pelicula();
-            pelicula1.titulo = "El señor de los anillos: La comunidad del anillo";
-            pelicula1.año = 2001;
-            pelicula2.titulo = "El señor de los anillos: Las dos torres";
-            pelicula2.año = 2002;
-            Console.WriteLine(pelicula1.titulo);
-            Console.WriteLine(pelicula1.año);
-            Console.WriteLine(pelicula2.titulo);
-            Console.WriteLine(pelicula2.año);
-
+            pelicula1.Titulo = "El Señor de los Anillos: La Comunidad del Anillo";
+            pelicula1.Año = 2001;
+            pelicula2.Titulo = "El Señor de los Anillos: Las Dos Torres";
+            pelicula2.Año = 2002;
+            Console.WriteLine("{0} {1}" ,pelicula1.Titulo ,pelicula1.Año);
+            Console.WriteLine("{0} {1}" ,pelicula2.Titulo ,pelicula2.Año);
             Console.WriteLine("Hello");
         }
     }
