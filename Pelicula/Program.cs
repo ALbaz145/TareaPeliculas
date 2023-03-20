@@ -24,6 +24,24 @@ namespace Pelicula
         }
      
         //Métodos
+        public string SetDirector(string director)
+        {
+            this.director = director;
+            return director;
+        }
+        public string GetDirector()
+        {
+            return director;
+        }
+        public string SetPais(string pais)
+        {
+            this.pais = pais;
+            return pais;
+        }
+        public string GetPais()
+        {
+            return pais;
+        }
         
         public string SetTitulo(string titulo)
         {
@@ -96,10 +114,14 @@ namespace Pelicula
             Pelicula pelicula4 = new Pelicula("Spider-Man: Into the Spider-Verse",2018);
             pelicula1.SetTitulo("El Señor de los Anillos: La Comunidad del Anillo");
             pelicula1.SetAño(2001);
+            pelicula1.SetDirector("Peter Jackson");
+            pelicula1.SetPais("Nueva Zelanda");
             pelicula2.SetTitulo("El Señor de los Anillos: Las Dos Torres");
             pelicula2.SetAño(2002);
-            Console.WriteLine("{0} {1}" ,pelicula1.GetTitulo() ,pelicula1.GetAño());
-            Console.WriteLine("{0} {1}" ,pelicula2.GetTitulo() ,pelicula2.GetAño());
+            pelicula2.SetDirector("Peter Jackson");
+            pelicula2.SetPais("Nueva Zelanda");
+            Console.WriteLine("{0} {1} {2} {3}" ,pelicula1.GetTitulo() ,pelicula1.GetAño(), pelicula1.GetDirector(), pelicula1.GetPais());
+            Console.WriteLine("{0} {1} {2} {3}" ,pelicula2.GetTitulo() ,pelicula2.GetAño(), pelicula2.GetDirector(), pelicula2.GetPais());
             Console.WriteLine("Hello");
             pelicula3.AgregaActor(new Actor("Joaquin Phoenix", 1974));
             pelicula3.ImprimeActores();
