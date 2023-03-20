@@ -31,13 +31,20 @@ namespace Pelicula
         private List<Actor> actores = new List<Actor>();
 
         //Constructores
+        public Pelicula()
+        {
+
+        }
+        Pelicula(string titulo, Int16 año)
+        {
+
+        }
      
         //Métodos
      
         public void Imprime()
         {
            Console.WriteLine($"{titulo} ({año})");
-
         }
     }
 
