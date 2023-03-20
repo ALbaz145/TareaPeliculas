@@ -20,6 +20,8 @@ namespace Pelicula
         }
         public Pelicula(string titulo, Int16 año)
         {
+            this.titulo = titulo;
+            this.año = año;
 
         }
      
@@ -72,7 +74,7 @@ namespace Pelicula
             }
         }
      
-        public void Imprime()
+        public void Imprime( )
         {
            Console.WriteLine($"{titulo} ({año})");
         }
@@ -112,6 +114,7 @@ namespace Pelicula
             Pelicula pelicula2 = new Pelicula();
             Pelicula pelicula3 = new Pelicula("El Bromas",2019);
             Pelicula pelicula4 = new Pelicula("Spider-Man: Into the Spider-Verse",2018);
+            Pelicula pelicula5 = new Pelicula("La La Land",2016);
             pelicula1.SetTitulo("El Señor de los Anillos: La Comunidad del Anillo");
             pelicula1.SetAño(2001);
             pelicula1.SetDirector("Peter Jackson");
@@ -122,11 +125,17 @@ namespace Pelicula
             pelicula2.SetPais("Nueva Zelanda");
             Console.WriteLine("{0} {1} {2} {3}" ,pelicula1.GetTitulo() ,pelicula1.GetAño(), pelicula1.GetDirector(), pelicula1.GetPais());
             Console.WriteLine("{0} {1} {2} {3}" ,pelicula2.GetTitulo() ,pelicula2.GetAño(), pelicula2.GetDirector(), pelicula2.GetPais());
+            pelicula3.Imprime();
+            pelicula4.Imprime();
+            pelicula5.Imprime();
             Console.WriteLine("Hello");
             pelicula3.AgregaActor(new Actor("Joaquin Phoenix", 1974));
             pelicula3.ImprimeActores();
             pelicula4.AgregaActor(new Actor("Shameik Moore", 1995));
             pelicula4.ImprimeActores();
+            pelicula5.AgregaActor(new Actor("Ryan Gosling", 1980));
+            pelicula5.AgregaActor(new Actor("Emma Stone", 1988));
+            pelicula5.ImprimeActores();
             List<Pelicula> peliculas = new List<Pelicula>();
             peliculas.Add(new Pelicula("El Señor de los Anillos: La Comunidad del Anillo", 2001));
             peliculas.Add(new Pelicula("El Señor de los Anillos: Las Dos Torres", 2002));
