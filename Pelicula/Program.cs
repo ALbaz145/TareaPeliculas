@@ -8,16 +8,22 @@ namespace Pelicula
     {
         //Campos
         private string titulo { get; set;}
-        public string Titulo
+        public string SetTitulo
         {
-            get { return titulo;}
             set { titulo = value;}
         }
+        public string GetTitulo
+        {
+            get { return titulo;}
+        }
         private Int16 año { get; set;}
-        public Int16 Año
+        public Int16 SetAño
+        {
+            set { año = value;}
+        }
+        public Int16 GetAño
         {
             get { return año;}
-            set { año = value;}
         }
 
         private string pais { get; set;}
@@ -30,7 +36,7 @@ namespace Pelicula
      
         public void Imprime()
         {
-     //       Console.WriteLine($"{titulo} ({año})");
+           Console.WriteLine($"{titulo} ({año})");
 
         }
     }
@@ -60,12 +66,12 @@ namespace Pelicula
         {
             Pelicula pelicula1 = new Pelicula();
             Pelicula pelicula2 = new Pelicula();
-            pelicula1.Titulo = "El Señor de los Anillos: La Comunidad del Anillo";
-            pelicula1.Año = 2001;
-            pelicula2.Titulo = "El Señor de los Anillos: Las Dos Torres";
-            pelicula2.Año = 2002;
-            Console.WriteLine("{0} {1}" ,pelicula1.Titulo ,pelicula1.Año);
-            Console.WriteLine("{0} {1}" ,pelicula2.Titulo ,pelicula2.Año);
+            pelicula1.SetTitulo = "El Señor de los Anillos: La Comunidad del Anillo";
+            pelicula1.SetAño = 2001;
+            pelicula2.SetTitulo = "El Señor de los Anillos: Las Dos Torres";
+            pelicula2.SetAño = 2002;
+            Console.WriteLine("{0} {1}" ,pelicula1.GetTitulo ,pelicula1.GetAño);
+            Console.WriteLine("{0} {1}" ,pelicula2.GetTitulo ,pelicula2.GetAño);
             Console.WriteLine("Hello");
         }
     }
